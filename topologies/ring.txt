@@ -1,0 +1,28 @@
+# Ring + chord topology (good for failure demos)
+#
+#   A --5-- B --5-- C
+#   |       |       |
+#  10      10      10
+#   |       |       |
+#   F --5-- E --5-- D
+#           |
+#           20
+#           |
+#           G
+
+router A
+router B
+router C
+router D
+router E
+router F
+router G
+
+link A B 5
+link B C 5
+link C D 10
+link D E 5
+link E F 5
+link F A 10
+link B E 10
+link E G 20
